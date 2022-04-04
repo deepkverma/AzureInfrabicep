@@ -19,9 +19,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
         }
       }
       {
-        name: 'Subnet-2'
+        name: 'AzureFirewallSubnet'
         properties: {
-          addressPrefix: '10.0.1.0/24'
+          addressPrefix: '10.0.1.0/28'
         }
       }
     ]
