@@ -1,5 +1,5 @@
 @description('Specifies the location for resources.')
-param rglocation string
+param RGlocation string
 param vnetlocation string
 // Below is the cmdlt to deploy from Azure CLI
 //az deployment sub create --name rgDeployment --template-file .\main.bicep --location WestUS
@@ -7,7 +7,7 @@ param vnetlocation string
 targetScope = 'subscription'
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' = {
   name: 'BicepRG'
-  location: rglocation
+  location: RGlocation
 }
 
 // Deploying VNet account using module
