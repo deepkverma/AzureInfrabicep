@@ -1,10 +1,10 @@
 
 @description('Specifies the location for resources.')
-param location string
+param Vnetlocation string
 
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
   name: 'Bicepvnet'
-  location: location
+  location: Vnetlocation
   properties: {
     addressSpace: {
       addressPrefixes: [
