@@ -1,3 +1,7 @@
+param VMadm string
+param VMPass string
+param WindowsOS string
+
 resource windowsVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
   name: 'Windows'
   location: 'eastus'
@@ -6,9 +10,9 @@ resource windowsVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
       vmSize: 'Standard_A2_v2'
     }
     osProfile: {
-      computerName: 'WindowsOS'
-      adminUsername: 'VMadm'
-      adminPassword: 'VMPass'
+      computerName: WindowsOS
+      adminUsername: VMadm
+      adminPassword: VMPass
     }
     storageProfile: {
       imageReference: {
